@@ -1,0 +1,72 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+const Home = () => {
+  return (
+    <section
+      id="home"
+      className="snap-start min-h-screen flex items-center justify-center bg-white dark:bg-black px-4"
+    >
+      <div className="text-center">
+        <motion.h1
+          className="text-4xl md:text-5xl font-bold mb-4"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Welcome to My Portfolio
+        </motion.h1>
+        <motion.p
+          className="text-xl md:text-2xl mb-8"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          I'm a passionate software engineer specializing in web development and
+          more.
+        </motion.p>
+        <motion.div
+          className="flex justify-center space-x-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <motion.a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl md:text-4xl hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaGithub />
+          </motion.a>
+          <motion.a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl md:text-4xl hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaLinkedin />
+          </motion.a>
+          <motion.a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl md:text-4xl hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaTwitter />
+          </motion.a>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Home;
