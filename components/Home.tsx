@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { GrDocumentDownload } from "react-icons/gr";
 
 const Home = () => {
   return (
@@ -24,8 +25,8 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          I'm a passionate software engineer specializing in web development and
-          more.
+          Hello! I&apos;m Achraf, a software engineer with a passion for
+          crafting solutions and turning ideas into reality.
         </motion.p>
         <motion.div
           className="flex justify-center space-x-6"
@@ -34,7 +35,7 @@ const Home = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <motion.a
-            href="https://github.com/yourusername"
+            href="https://github.com/extermachraf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-3xl md:text-4xl hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"
@@ -44,7 +45,7 @@ const Home = () => {
             <FaGithub />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/achraf-el-kouch-a43256258"
             target="_blank"
             rel="noopener noreferrer"
             className="text-3xl md:text-4xl hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"
@@ -54,14 +55,14 @@ const Home = () => {
             <FaLinkedin />
           </motion.a>
           <motion.a
-            href="https://twitter.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-3xl md:text-4xl hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            href="/achrafelkouchcv.pdf"
+            download="Achraf_El_Kouch_CV.pdf"
+            className="fixed bottom-7 right-10 text-xl transition-colors duration-300 rounded-md border bg-black dark:bg-white dark:text-black text-white p-2 z-50 shadow-md flex items-center justify-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <FaTwitter />
+            <GrDocumentDownload />
+            <p>Download CV</p>
           </motion.a>
         </motion.div>
       </div>

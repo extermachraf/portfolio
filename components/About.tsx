@@ -4,16 +4,20 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const skills = [
-  { name: "Next.js", logo: "/logos/nextjs.png" },
-  { name: "React.js", logo: "/logos/react.png" },
-  { name: "JavaScript", logo: "/logos/javascript.png" },
-  { name: "TypeScript", logo: "/logos/typescript.png" },
-  { name: "Docker", logo: "/logos/docker.png" },
-  { name: "Java", logo: "/logos/java.png" },
-  { name: "C++", logo: "/logos/cpp.png" },
-  { name: "C", logo: "/logos/c.png" },
-  { name: "Shell", logo: "/logos/shell.png" },
-  { name: "NestJS", logo: "/logos/nestjs.png" },
+  { name: "Next.js", logo: "/logos/next.svg" },
+  { name: "React.js", logo: "/logos/react.svg" },
+  { name: "JavaScript", logo: "/logos/javascript.svg" },
+  { name: "TypeScript", logo: "/logos/typescript.svg" },
+  { name: "Docker", logo: "/logos/docker.svg" },
+  { name: "Java", logo: "/logos/java.svg" },
+  { name: "C++", logo: "/logos/cpp.svg" },
+  { name: "C", logo: "/logos/c.svg" },
+  { name: "Shell", logo: "/logos/shell.svg" },
+  { name: "NestJS", logo: "/logos/nestjs.svg" },
+  { name: "taillwind", logo: "/logos/taillwind.svg" },
+  { name: "CSS", logo: "/logos/css.svg" },
+  { name: "HTML", logo: "/logos/html.svg" },
+  { name: "PostgreSQL", logo: "/logos/postgresql.svg" },
 ];
 
 const About = () => {
@@ -23,7 +27,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="snap-start min-h-screen py-20 bg-gray-100 dark:bg-gray-900"
+      className="snap-start min-h-screen py-20 bg-gray-100 dark:bg-gray-800"
     >
       <div className="container mx-auto px-4 pt-16">
         <motion.h2
@@ -47,10 +51,10 @@ const About = () => {
             robust web applications using modern frameworks and best practices.
           </p>
           <p>
-            I'm constantly learning and adapting to new technologies, staying at
-            the forefront of the ever-evolving world of software development. My
-            goal is to contribute to innovative projects that make a positive
-            impact while continuously growing as a professional.
+            I&apos;m constantly learning and adapting to new technologies,
+            staying at the forefront of the ever-evolving world of software
+            development. My goal is to contribute to innovative projects that
+            make a positive impact while continuously growing as a professional.
           </p>
         </motion.div>
         <motion.h3

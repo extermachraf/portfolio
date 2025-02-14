@@ -30,11 +30,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-4 left-4 right-4 z-50 bg-white dark:bg-black shadow-md rounded-full">
+      <nav className="fixed top-4 left-4 right-4 z-50 bg-white dark:bg-black shadow-md rounded-full px-6 w-[90%] mx-auto">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <Link href="/" className="text-2xl font-bold">
-              Your Name
+              AE
             </Link>
             <div className="hidden md:flex items-center space-x-6">
               <ul className="flex space-x-6">
