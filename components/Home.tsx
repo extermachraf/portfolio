@@ -57,7 +57,7 @@ const Home = () => {
           <motion.a
             href="/achrafelkouchcv.pdf"
             download="Achraf_El_Kouch_CV.pdf"
-            className="fixed bottom-7 right-10 text-xl transition-colors duration-300 rounded-md border bg-black dark:bg-white dark:text-black text-white p-2 z-50 shadow-md flex items-center justify-center gap-2"
+            className="fixed bottom-7 right-10 text-xl transition-colors duration-300 rounded-md bg-lime-600 text-white p-2 z-50 shadow-md flex items-center justify-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

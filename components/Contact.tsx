@@ -1,9 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useForm, ValidationError } from "@formspree/react";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [state, Submit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID!);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,6 +28,15 @@ const Contact = () => {
     setFormData({ name: "", email: "", message: "" });
   };
 
+  useEffect(() => {
+    if (state.succeeded) {
+      toast({
+        title: "Email Sent 😊",
+        description: "I'll get back to you as soon as possible! ",
+      });
+    }
+  }, [state.succeeded]);
+
   return (
     <section
       id="contact"
@@ -39,7 +52,7 @@ const Contact = () => {
           Contact Me
         </motion.h2>
         <motion.form
-          onSubmit={handleSubmit}
+          onSubmit={Submit}
           className="max-w-lg mx-auto"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,6 +72,7 @@ const Contact = () => {
               className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 bg-white dark:bg-gray-800"
               placeholder="Your Name"
             />
+            <ValidationError prefix="name" field="name" errors={state.errors} />
           </div>
           <div className="mb-4">
             <label htmlFor="email" className="block font-bold mb-2">
@@ -73,6 +87,11 @@ const Contact = () => {
               required
               className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 bg-white dark:bg-gray-800"
               placeholder="your@email.com"
+            />
+            <ValidationError
+              prefix="email"
+              field="email"
+              errors={state.errors}
             />
           </div>
           <div className="mb-4">
@@ -89,6 +108,11 @@ const Contact = () => {
               className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 bg-white dark:bg-gray-800"
               placeholder="Your message here..."
             ></textarea>
+            <ValidationError
+              prefix="message"
+              field="message"
+              errors={state.errors}
+            />
           </div>
           <div className="text-center">
             <button

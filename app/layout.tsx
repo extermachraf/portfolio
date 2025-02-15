@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import { useState, useEffect } from "react";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "@/components/ui/toaster";
 import type React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,6 +35,7 @@ export default function RootLayout({
             <main className="snap-y snap-mandatory h-screen overflow-y-auto pt-20">
               {children}
             </main>
+            <Toaster />
           </div>
         </ThemeProvider>
       </body>
