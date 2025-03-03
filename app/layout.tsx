@@ -1,43 +1,54 @@
-"use client";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Poppins, Playfair_Display } from "next/font/google";
 import NavBar from "@/components/NavBar";
-import { useState, useEffect } from "react";
-import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/toaster";
+import { Providers } from "./providers";
 import type React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+// Load fonts with display swap and proper subsets
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  preload: true,
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-poppins",
+  preload: true,
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
+  preload: true,
+});
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
   return (
-    <html lang="en">
-      <body>
-        <ThemeProvider attribute="class">
-          <div
-            className={`${inter.className} bg-white dark:bg-black text-black dark:text-white`}
-          >
-            <NavBar />
-            <main className="snap-y snap-mandatory h-screen overflow-y-auto pt-20">
-              {children}
-            </main>
-            <Toaster />
-          </div>
-        </ThemeProvider>
+    <html lang="en" className={`${inter.variable} ${poppins.variable} ${playfair.variable} scroll-smooth`} suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Achraf El Kouch - Software Engineer Portfolio" />
+        <title>Achraf El Kouch | Portfolio</title>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className="antialiased font-poppins">
+        <Providers>
+          <NavBar />
+          <main className="h-screen overflow-y-auto pt-20 scroll-smooth">
+            {children}
+          </main>
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );

@@ -42,7 +42,7 @@ const Contact = () => {
         <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_500px_at_10%_100%,rgba(99,102,241,0.1),transparent)]"></div>
       </div>
 
-      <div className="container mx-auto px-4  relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="flex flex-col items-center"
           initial={{ opacity: 0, y: -20 }}
@@ -223,4 +223,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact; 

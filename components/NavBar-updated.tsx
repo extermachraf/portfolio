@@ -13,42 +13,9 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  
-  // Initialize intersection observer to track which section is in view
+
   useEffect(() => {
     setMounted(true);
-    
-    const observerOptions = {
-      root: null, // use viewport as root
-      rootMargin: "-50% 0px", // Consider section in view when it's 50% in viewport
-      threshold: 0, // Trigger as soon as any part is visible
-    };
-    
-    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry: IntersectionObserverEntry) => {
-        if (entry.isIntersecting) {
-          // Update active section when a section comes into view
-          setActiveSection(entry.target.id);
-        }
-      });
-    };
-    
-    const observer = new IntersectionObserver(handleIntersect, observerOptions);
-    
-    // Observe all sections
-    const sections = document.querySelectorAll("section[id]");
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-    
-    return () => {
-      // Clean up the observer
-      if (sections) {
-        sections.forEach((section) => {
-          observer.unobserve(section);
-        });
-      }
-    };
   }, []);
 
   if (!mounted) {
@@ -79,7 +46,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-3 rounded-full border border-white/20 dark:border-gray-700/20 left-5 md:left-40 md:right-40 z-[100] py-2 backdrop-blur-2xl shadow-lg right-5 bg-white/30 dark:bg-gray-900/30">
+      <motion.nav 
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+        className={`fixed top-3 rounded-full border border-white/20 dark:border-gray-700/20 left-5 md:left-40 md:right-40 z-[100] transition-all duration-500 py-2  dark:bg-gray-900/30 backdrop-blur-2xl shadow-lg right-5`}
+      >
         <div className="container mx-auto max-w-7xl">
           <div className="flex justify-between items-center px-6 md:px-8">
             <Link 
@@ -175,7 +147,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
       
       {/* Mobile menu */}
       <AnimatePresence>
@@ -231,4 +203,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 
