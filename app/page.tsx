@@ -5,11 +5,11 @@ import Contact from "@/components/Contact";
 
 export default function Page() {
   return (
-    <>
+    <div>
       <Home />
       <About />
       <Skills />
       <Contact />
-    </>
+    </div>
   );
 }

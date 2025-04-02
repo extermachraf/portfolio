@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 import type React from "react";
 
 // Load fonts with display swap and proper subsets
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
@@ -34,17 +34,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable} ${playfair.variable} scroll-smooth`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${poppins.variable} ${playfair.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Achraf El Kouch - Software Engineer Portfolio" />
+        <meta
+          name="description"
+          content="Achraf El Kouch - Software Engineer Portfolio"
+        />
         <title>Achraf El Kouch | Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="antialiased font-poppins">
+      <body className="antialiased font-poppins bg-[#1a1a2e]">
         <Providers>
           <NavBar />
-          <main className="h-screen overflow-y-auto pt-20 scroll-smooth">
+          <main className="h-screen overflow-y-auto bg-[#1a1a2e] pt-20 scroll-smooth">
             {children}
           </main>
           <Toaster />
