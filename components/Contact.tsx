@@ -51,26 +51,38 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.3 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+          >
             Get in <span className="text-[#ffd700]">Touch</span>
-          </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p
+            className="text-lg text-gray-300 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+          >
             I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your visions.
-          </p>
+          </motion.p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3, delay: 0.3 }}
             className="bg-[#1a1a2e]/80 p-8 rounded-xl shadow-lg border border-[#ffd700]/20 backdrop-blur-sm"
           >
             <form onSubmit={Submit} className="space-y-6">
@@ -169,13 +181,17 @@ const Contact = () => {
 
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3, delay: 0.4 }}
             className="space-y-8"
           >
-            <div className="bg-[#1a1a2e]/80 p-6 rounded-xl shadow-lg border border-[#ffd700]/20 backdrop-blur-sm">
+            <motion.div
+              className="bg-[#1a1a2e]/80 p-6 rounded-xl shadow-lg border border-[#ffd700]/20 backdrop-blur-sm"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
               <h3 className="text-xl font-semibold text-white mb-4">
                 Contact Information
               </h3>
@@ -204,9 +220,13 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-[#1a1a2e]/80 p-6 rounded-xl shadow-lg border border-[#ffd700]/20 backdrop-blur-sm">
+            <motion.div
+              className="bg-[#1a1a2e]/80 p-6 rounded-xl shadow-lg border border-[#ffd700]/20 backdrop-blur-sm"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
               <h3 className="text-xl font-semibold text-white mb-4">
                 Follow Me
               </h3>
@@ -216,7 +236,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-[#ffd700] transition-colors duration-300"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.1, y: -5 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   GitHub
@@ -226,7 +246,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-[#ffd700] transition-colors duration-300"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.1, y: -5 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   LinkedIn
@@ -235,14 +255,14 @@ const Contact = () => {
                   href="/achrafelkouchcv.pdf"
                   download
                   className="text-gray-300 hover:text-[#ffd700] transition-colors duration-300 inline-flex items-center space-x-2"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.1, y: -5 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <FaDownload className="w-5 h-5" />
                   <span>Download CV</span>
                 </motion.a>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

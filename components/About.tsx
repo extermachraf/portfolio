@@ -58,11 +58,11 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
           <motion.div
-            className="card p-8 backdrop-blur-sm bg-[#1a1a2e]/50 border border-[#ffd700]/20 hover:border-[#ffd700]/40 transition-all duration-300"
+            className="card p-8 backdrop-blur-sm bg-[#1a1a2e]/50 border border-[#ffd700]/20 hover:border-[#ffd700]/40 transition-all"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.2 }}
             whileHover={{ scale: 1.02 }}
           >
             <h3 className="text-2xl font-semibold mb-4">Background</h3>
@@ -76,11 +76,11 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            className="card p-8 backdrop-blur-sm bg-[#1a1a2e]/50 border border-[#ffd700]/20 hover:border-[#ffd700]/40 transition-all duration-300"
+            className="card p-8 backdrop-blur-sm bg-[#1a1a2e]/50 border border-[#ffd700]/20 hover:border-[#ffd700]/40 transition-all"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.2 }}
             whileHover={{ scale: 1.02 }}
           >
             <h3 className="text-2xl font-semibold mb-4 text-white">
@@ -118,7 +118,7 @@ const About = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.2 }}
         >
           {[
             {
@@ -139,7 +139,7 @@ const About = () => {
           ].map((item, index) => (
             <motion.div
               key={item.title}
-              className="card p-6 backdrop-blur-sm bg-[#1a1a2e]/50 border border-[#ffd700]/20 hover:border-[#ffd700]/40 transition-all duration-300"
+              className="card p-6 backdrop-blur-sm bg-[#1a1a2e]/50 border border-[#ffd700]/20 hover:border-[#ffd700]/40 transition-all"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

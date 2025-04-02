@@ -51,7 +51,7 @@ export default function RootLayout({
       <body className="antialiased font-poppins bg-[#1a1a2e]">
         <Providers>
           <NavBar />
-          <main className="h-screen overflow-y-auto bg-[#1a1a2e] pt-20 scroll-smooth">
+          <main className="h-screen overflow-y-auto bg-[#1a1a2e] scroll-smooth">
             {children}
           </main>
           <Toaster />
