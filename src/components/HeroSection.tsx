@@ -17,7 +17,7 @@ const HeroSection = () => {
             <div className="relative w-full max-w-md lg:max-w-lg">
               <div className="aspect-square relative overflow-hidden rounded-2xl shadow-2xl">
                 <Image
-                  src="/ana.webp"
+                  src="/ana1.png"
                   alt="Achraf El Kouch"
                   fill
                   className="object-cover"

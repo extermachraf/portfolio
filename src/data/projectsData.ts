@@ -14,17 +14,11 @@ export const projectsData: Project[] = [
   {
     title: "LoveYouTravel",
     description:
-      "Contributed to building LoveYouTravel, a responsive travel website showcasing destinations and enabling users to explore services and travel packages. I worked on UI components, responsive layouts, and interaction/animation details to improve the user experience.",
+      "Contributed to building LoveYouTravel, a travel website showcasing destinations and enabling users to explore services and travel packages.",
     technologies: ["Spring Boot", "Angular", "stripe", "Tailwind CSS", "Mysql"],
     image: "/projects/loveYouTravel.png",
     liveUrl: "https://loveyoutravel.it/home",
     category: "Travel Website",
-    role: "Frontend contributor (UI & animations)",
-    highlights: [
-      "Built responsive UI components and layouts",
-      "Implemented animations and interactive elements",
-      "Optimized performance and image loading",
-    ],
   },
   {
     title: "Vicini di Casi",
@@ -34,43 +28,35 @@ export const projectsData: Project[] = [
       "Spring Boot",
       "Angular",
       "Java",
-      "CSS",
       "Firebase",
       "AI integration",
     ],
     image: "/projects/vicinidicasi.png",
     liveUrl: "https://vicinidicasi.it/",
     category: "Juridique platform",
-    role: "Frontend Developer",
-    highlights: [
-      "Implemented responsive property listing components",
-      "Built advanced search and filtering functionality",
-      "Integrated Google Maps for property location visualization",
-      "Optimized loading performance for property listings",
-    ],
   },
   {
     title: "WinkWing",
     description:
-      "Contributed to WinkWing, an innovative e-commerce platform specializing in beauty and wellness products. Developed key features to enhance the shopping experience, including product browsing, filtering, and a seamless checkout process.",
+      "Contributed to WinkWing, a comprehensive rental apartment platform that helps users easily find apartments near them. Developed features to aggregate listings from 950+ websites, provide instant alerts for new properties, and deliver a seamless mobile-first apartment hunting experience.",
     technologies: [
       "Next.js",
       "Nest.js",
       "JavaScript",
       "SASS",
       "RESTful APIs",
-      "Stripe Integration",
+      "Real-time Notifications",
     ],
     image: "/projects/winkwing.png",
     liveUrl: "https://www.winkwing.com/en",
     category: "Real Estate Platform",
     role: "Frontend Developer",
     highlights: [
-      "Built responsive product catalog and detail pages",
-      "Implemented dynamic filtering and search functionality",
-      "Created smooth checkout experience with Stripe integration",
-      "Optimized website performance and loading times",
-      "Developed multi-language support for international customers",
+      "Built responsive apartment listing and detail pages",
+      "Implemented advanced filtering and search functionality for properties",
+      "Created real-time notification system for new listings",
+      "Optimized mobile experience for apartment hunting on-the-go",
+      "Developed multi-language support for international users",
     ],
   },
   {
@@ -78,7 +64,7 @@ export const projectsData: Project[] = [
     description:
       "Worked with Achieve, a company specializing in designing and optimizing online marketing campaigns aimed at driving business growth. Contributed to developing their digital platform that helps increase website traffic, generate high-quality leads, and boost revenue through data-driven marketing strategies.",
     technologies: [
-      "React",
+      "Nextjs",
       "TypeScript",
       "WordPress",
       "Tailwind CSS",
