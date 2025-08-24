@@ -1,66 +1,31 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['var(--font-poppins)'],
-        mono: ['var(--font-mono)'],
-        playfair: ['var(--font-playfair)'],
-        inter: ['var(--font-inter)'],
-        poppins: ['var(--font-poppins)'],
-      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // Custom color palette
         primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-          950: '#1e1b4b',
+          light: "#F5F5F5", // Light gray
+          red: "#F05454", // Red accent
+          blue: "#30475E", // Dark blue
+          dark: "#121212", // Almost black
         },
-        accent: {
-          light: '#10b981', // emerald-500
-          DEFAULT: '#059669', // emerald-600
-          dark: '#047857', // emerald-700
-        },
+        // Override default colors
+        background: "#F5F5F5",
+        foreground: "#121212",
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-pattern': "url('/images/hero-pattern.svg')",
-      },
-      animation: {
-        'bounce-slow': 'bounce 3s infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'float-delayed': 'float 6s ease-in-out infinite 2s',
-        'float-more-delayed': 'float 6s ease-in-out infinite 4s',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
-        }
-      },
-      boxShadow: {
-        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        'glow': '0 0 15px rgba(99, 102, 241, 0.5)',
-        'glow-accent': '0 0 15px rgba(16, 185, 129, 0.5)',
+      fontFamily: {
+        sans: ["var(--font-poppins)", "Arial", "Helvetica", "sans-serif"],
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;
